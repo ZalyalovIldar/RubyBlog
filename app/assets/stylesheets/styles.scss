@@ -1,8 +1,52 @@
 $orange: orange;
+$green: #15EF15;
+
+.style-matrix {
+  color: white;
+  background-image: image-url("matrix.jpg");
+  background-attachment: fixed;
+
+  h1, h2, h3, h4, h5, h6 {
+    color: white !important;
+  }
+
+  label {
+    color: white !important;
+  }
+
+  .top-bar {
+    background: green;
+
+    .active {
+      background: #003300 !important;
+    }
+
+    li {
+      a {
+        background: green !important;
+        color: white !important;
+      }
+    }
+  }
+
+  a {
+    color: $green;
+  }
+
+  .button {
+    background: $green;
+    color: white;
+  }
+
+  .main-content {
+    border-bottom: 3px solid white;
+  }
+}
 
 .style-orange {
   color: white;
   background-image: image-url("orange.jpg");
+  background-attachment: fixed;
 
   h1, h2, h3, h4, h5, h6 {
     color: red !important;
@@ -39,4 +83,8 @@ $orange: orange;
   .main-content {
     border-bottom: 3px solid white;
   }
+}
+
+.post {
+  border-bottom: 1px solid white;
 }

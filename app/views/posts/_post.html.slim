@@ -1,0 +1,8 @@
+.post
+  h1
+    = link_to post.title, post, class: "post-link"
+  p = post.content
+  div
+    b
+      ' Author:
+    = post.user.email

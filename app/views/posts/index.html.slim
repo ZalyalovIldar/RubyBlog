@@ -1,13 +1,14 @@
 h1 Listing posts
 
-- @posts.each do |post|
-  h1
-    = link_to post.title, post, class: "post-link"
-  p = post.content
-  div
-    b
-      ' Author:
-    = post.user.email
+- if current_user.try(:style) == "matrix"
+  - @posts.each_slice(2) do |post1, post2|
+    .row
+      .small-6.columns
+        = render post1
+      .small-6.columns
+        = render post2 if post2.present?
+- else
+  = render @posts
 
 - if user_signed_in?
   = link_to 'New Post', new_post_path, class: 'button'
