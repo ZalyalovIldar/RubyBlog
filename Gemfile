@@ -47,3 +47,4 @@ end
 gem "slim-rails"
 gem "bootstrap-sass"
 gem 'devise'
+gem 'active_link_to'
