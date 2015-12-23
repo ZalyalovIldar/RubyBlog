@@ -2,11 +2,12 @@ h1 Listing posts
 
 - @posts.each do |post|
   h1
-    = link_to post.title, post
+    = link_to post.title, post, class: "post-link"
   p = post.content
   div
     b
       ' Author:
     = post.user.email
 
-= link_to 'New Post', new_post_path, class: 'btn btn-default'
+- if user_signed_in?
+  = link_to 'New Post', new_post_path, class: 'button'

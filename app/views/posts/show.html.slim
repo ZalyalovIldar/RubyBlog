@@ -14,8 +14,8 @@ p
 '|
 = link_to 'Back', posts_path
 
-h1 = "Comments (#{@post.comments.count}):"
+h3 = "Comments (#{@post.comments.count}):"
 = form_for [@post, Comment.new] do |f|
   = f.text_area :text
-  = f.submit "Send"
+  = f.submit "Send", class: "button"
 = render @post.comments

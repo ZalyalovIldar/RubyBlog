@@ -1,0 +1,42 @@
+$orange: orange;
+
+.style-orange {
+  color: white;
+  background-image: image-url("orange.jpg");
+
+  h1, h2, h3, h4, h5, h6 {
+    color: red !important;
+  }
+
+  label {
+    color: white !important;
+  }
+
+  .top-bar {
+    background: $orange;
+
+    .active {
+      background: red !important;
+    }
+
+    li {
+      a {
+        background: $orange !important;
+        color: white !important;
+      }
+    }
+  }
+
+  a {
+    color: $orange;
+  }
+
+  .button {
+    background: $orange;
+    color: white;
+  }
+
+  .main-content {
+    border-bottom: 3px solid white;
+  }
+}
