@@ -48,3 +48,4 @@ gem "slim-rails"
 gem "foundation-rails"
 gem 'devise'
 gem 'active_link_to'
+gem 'rails_12factor'
