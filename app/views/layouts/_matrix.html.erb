@@ -1,0 +1,28 @@
+<div class="small-8 columns small-centered">
+  <nav class="top-bar" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+        <h1>
+          <%= link_to "My blog", root_path %>
+        </h1>
+      </li>
+    </ul>
+    <section class="top-bar-section">
+      <ul class="right">
+        <% if user_signed_in? %>
+          <%= active_link_to "Edit profile", edit_user_registration_path, active: :exclusive, wrap_tag: :li %>
+          <%= active_link_to "Sing out", destroy_user_session_path, method: :delete, active: :exclusive, wrap_tag: :li %>
+        <% else %>
+          <%= active_link_to "Sing in",  new_user_session_path, active: :exclusive, wrap_tag: :li %>
+          <%= active_link_to "Sing up", new_user_registration_path, active: :exclusive, wrap_tag: :li %>
+        <% end %>
+      </ul>
+    </section>
+  </nav>
+
+  <div class="row">
+    <div class="small-12 columns main-content">
+      <%= yield %>
+    </div>
+  </div>
+</div>

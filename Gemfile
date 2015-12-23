@@ -45,5 +45,7 @@ group :development do
   gem 'spring'
 end
 gem "slim-rails"
-gem "bootstrap-sass"
+gem "foundation-rails"
 gem 'devise'
+gem 'active_link_to'
+gem 'rails_12factor'
